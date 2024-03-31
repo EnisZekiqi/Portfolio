@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import { AnimatePresence, motion } from "framer-motion";
+import { AppBar } from "@mui/material";
 
 const Navbar = () => {
 
@@ -16,7 +17,7 @@ const Navbar = () => {
     }
 
     return ( 
-        <div className="navbar justify-between flex gap-2">
+        <div  className="navbar justify-between flex gap-2">
             <h1 className="Intro ml-4">Enis.dev</h1>
             <div className="nonomi flex gap-4 mr-4">
                 <div className="flex flex-col">
@@ -39,7 +40,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-col">
                     <a   onMouseEnter={()=>setShow2(true)}
-              onMouseLeave={()=>setShow2(false)} href="">Portfolio</a>
+              onMouseLeave={()=>setShow2(false)} href="#portfolio">Portfolio</a>
                     <span 
                 style={{
                   transform: show2 ? "scaleX(1)": "scaleX(0)"
@@ -63,28 +64,31 @@ const Navbar = () => {
                     {drawer && (
           <>
           
-           <motion.div
+           
+
+            <div onClick={() => setDrawer(false)} className="backdrop">
+            <motion.div
              initial={{opacity:0}}
              animate={{opacity:1 }}
              exit={{opacity:0}}
              transition={{
                duration:0.5
              }}
-              className="drawer"
+              className=""
               onClick={() => setDrawer(false)} // Close drawer when backdrop is clicked
             >
-              <div className="nonomi2 flex flex-col flex-gap gap-4 mr-4">
-                <div className="flex flex-col mt-10">
-                <a    onMouseEnter={()=>setShow(true)}
+              <div className="nonomi2 flex items-center justify-center flex-col flex-gap gap-4 mr-4">
+                <div className="flex items-center justify-center flex-col mt-16">
+                <a  style={{fontSize:35}}  onMouseEnter={()=>setShow(true)}
               onMouseLeave={()=>setShow(false)} href="">Home</a>
                 <span 
                 style={{
                   transform: show ? "scaleX(1)": "scaleX(0)"
                 }}
-                className='line2  origin-left h-1 rounded-full transition-transform duration-300 ease-out'></span>
+                className='line2 flex   origin-left h-1 rounded-full transition-transform duration-300 ease-out'></span>
                 </div>
-                    <div className="flex flex-col">
-                    <a   onMouseEnter={()=>setShow1(true)}
+                    <div className="flex items-center justify-center flex-col">
+                    <a style={{fontSize:35}}  onMouseEnter={()=>setShow1(true)}
               onMouseLeave={()=>setShow1(false)} href="#about">About</a>
               <span 
                 style={{
@@ -92,8 +96,8 @@ const Navbar = () => {
                 }}
                 className='line2  origin-left  h-1 rounded-full transition-transform duration-300 ease-out'></span>
                     </div>
-                    <div className="flex flex-col">
-                    <a   onMouseEnter={()=>setShow2(true)}
+                    <div className="flex items-center justify-center flex-col">
+                    <a style={{fontSize:35}}  onMouseEnter={()=>setShow2(true)}
               onMouseLeave={()=>setShow2(false)} href="">Portfolio</a>
                     <span 
                 style={{
@@ -101,9 +105,9 @@ const Navbar = () => {
                 }}
                 className='line2  origin-left h-1 rounded-full transition-transform duration-300 ease-out'></span>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex items-center justify-center flex-col">
 
-                    <a   onMouseEnter={()=>setShow3(true)}
+                    <a  style={{fontSize:35}} onMouseEnter={()=>setShow3(true)}
               onMouseLeave={()=>setShow3(false)} href="">Contact</a>
               <span 
                 style={{
@@ -113,12 +117,10 @@ const Navbar = () => {
                     </div> 
             </div>
             </motion.div>
-
-            <div onClick={() => setDrawer(false)} className="backdrop"></div>
+            </div>
           </>
         )}
                     </AnimatePresence>
-                    
                     </div>
         </div>
      );

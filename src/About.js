@@ -37,7 +37,7 @@ const About = () => {
                         <p style={{color:"#00090E" ,width:'max-content'}} className='font-extrabold'>ABOUT ME </p>
                     </div>
                     <div className="tekxti mt-6 text-start">
-                        <p style={{color:"#265c73"}}>I am a junior Front-End Developer from Kosovo i am excited to create new stunning websites. My experties lies crafting dynamic , engaging interfaces and stylish designs . I am also a team player who thrives in collaborating with the team</p>
+                        <p style={{color:"#265c73"}}>I am a 22 year old junior Front-End Developer from Kosovo that is excited to create new stunning websites. My experties lies crafting dynamic , engaging interfaces and stylish designs . I am also a team player who thrives in collaborating with the team</p>
                     </div>
                 </div>
            </div>
