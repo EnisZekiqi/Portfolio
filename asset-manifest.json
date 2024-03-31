@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AutoZ/static/css/main.3fb85cb5.css",
+    "main.js": "/AutoZ/static/js/main.52b741a9.js",
+    "static/js/453.ace21015.chunk.js": "/AutoZ/static/js/453.ace21015.chunk.js",
+    "static/media/pakata-goh-RDolnHtjVCY-unsplash.jpg": "/AutoZ/static/media/pakata-goh-RDolnHtjVCY-unsplash.297f690920833a2578a4.jpg",
+    "index.html": "/AutoZ/index.html",
+    "main.3fb85cb5.css.map": "/AutoZ/static/css/main.3fb85cb5.css.map",
+    "main.52b741a9.js.map": "/AutoZ/static/js/main.52b741a9.js.map",
+    "453.ace21015.chunk.js.map": "/AutoZ/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fb85cb5.css",
+    "static/js/main.52b741a9.js"
+  ]
+}
