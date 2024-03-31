@@ -12,15 +12,15 @@ const Navbar = () => {
     const [drawer,setDrawer]=useState(false)
 
     const toggleDrawer =()=>{
-        setDrawer(!drawer);
+        setDrawer(true);
     }
 
     return ( 
         <div className="navbar justify-between flex gap-2">
-            <h1 className="Intro ml-4">ezdev</h1>
+            <h1 className="Intro ml-4">Enis.dev</h1>
             <div className="nonomi flex gap-4 mr-4">
                 <div className="flex flex-col">
-                <a    onMouseEnter={()=>setShow(true)}
+                <a  onMouseEnter={()=>setShow(true)}
               onMouseLeave={()=>setShow(false)} href="">Home</a>
                 <span 
                 style={{
@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
                     <div className="flex flex-col">
                     <a   onMouseEnter={()=>setShow1(true)}
-              onMouseLeave={()=>setShow1(false)} href="">About</a>
+              onMouseLeave={()=>setShow1(false)} href="#about">About</a>
               <span 
                 style={{
                   transform: show1 ? "scaleX(1)": "scaleX(0)"
@@ -85,7 +85,7 @@ const Navbar = () => {
                 </div>
                     <div className="flex flex-col">
                     <a   onMouseEnter={()=>setShow1(true)}
-              onMouseLeave={()=>setShow1(false)} href="">About</a>
+              onMouseLeave={()=>setShow1(false)} href="#about">About</a>
               <span 
                 style={{
                   transform: show1 ? "scaleX(1)": "scaleX(0)"

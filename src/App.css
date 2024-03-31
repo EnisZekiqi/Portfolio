@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  scroll-behavior: smooth;
 }
 
+.html{
+  scroll-behavior: smooth;
+}
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 *{
@@ -10,24 +14,111 @@
 
 .Background {
   background-color: #00090E;
-  height: 100vh;
+
   color: #6699CC;
 }
 .empty{
   height: 25px;
 }
+.empty2{
+  height: 170px;
+}
 .Intro{
   font-size: 25px;
   font-weight: 500;
 }
+.name{
+  color:#e6eeff ;
+}
+.about{
+  background-color: #B3CCFF;
+  height: 100vh;
+}
+.xms{
+
+}
+.photoja{
+
+}
+.photography{
+margin-top: -40px;
+margin-right: 50px;
+}
+@media (max-width:764px) {
+  .photography{
+ margin-top: 20px;
+ margin-left: 50px;
+  }
+}
+
+@media (max-width:616px) {
+  .profili{
+ display: none;
+  }
+}
+.card0{
+  width: 215px;
+  border-radius: 10px;
+  height: 70px;
+  background-color:#B3CCFF ;
+  color: #00090E;
+}
+
+.inmg{
+
+}
+
+
+.view{
+  background-color:#66ADCC4d ;
+  color:#B3CCFF ;
+  border-radius: 10px;
+  width: max-content;
+  padding: 10px;
+  margin-top: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+.view2{
+  background-color:#66ADCC4d ;
+  margin-top: 15px;
+  color:#B3CCFF ;
+  transform: scale(1.1);
+  border-radius: 10px;
+  width: max-content;
+  padding: 10px;
+  box-shadow: 0px 2px 14px 4px rgba(191,236,255,0.75);
+-webkit-box-shadow: 0px 2px 14px 4px rgba(191,236,255,0.75);
+-moz-box-shadow: 0px 2px 14px 4px rgba(191,236,255,0.75);
+transition: 0.5s ease-in-out;
+}
+
+.view3{
+  background-color: transparent;
+  margin-top: 15px;
+  color:#6699CC ;
+  padding: 10px;
+  width: max-content;
+  transition: transform 0.5s ease-in-out;
+}
+.view4{
+  transform: scale(1.1);
+}
+.bold{
+  color: #6699CC;
+  font-weight: 800;
+}
+.bold2{
+  color: #e6eeff;
+  font-weight: 700;
+}
 .line{
   width: 60px;
-  height: 4px;
+  height: 3px;
   background-color: #B3CCFF;
 }
 .line2{
   width: 60px;
-  height: 4px;
+  height: 3px;
   margin-left: 78px;
   background-color: #00090E;
 }
