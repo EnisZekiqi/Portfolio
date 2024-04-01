@@ -36,6 +36,7 @@ html{
 .about{
   background-color: #B3CCFF;
   height: 100vh;
+  margin-bottom: -40px;
 }
 .xms{
 
@@ -46,6 +47,7 @@ html{
 .photography{
 margin-top: -40px;
 margin-right: 50px;
+animation: updown 4s linear infinite;
 }
 @media (max-width:764px) {
   .photography{
@@ -54,6 +56,19 @@ margin-right: 50px;
   }
 }
 
+.pfbtn{
+  border-radius: 5px;
+  width: max-content;
+  background-color: #6699CC;
+}
+@keyframes updown {
+  0%{
+    transform: translateY(-50);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 @media (max-width:616px) {
   .profili{
  display: none;
@@ -65,6 +80,64 @@ margin-right: 50px;
   height: 70px;
   background-color:#B3CCFF ;
   color: #00090E;
+}
+.card {
+  width: 500px;
+  height: 254px;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px  rgba(0, 9, 14,0.4);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.card:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 9, 14,0.55);
+  background-image: url(images/autoz.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.first-content {
+  height: 100%;
+  background-image: url(images/autoz.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.card:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  background: rgba( 191, 236, 255, 0.25 );
+backdrop-filter: blur( 3.5px );
+-webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+}
+
+.card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+  cursor: default;
 }
 
 .inmg{
@@ -179,7 +252,15 @@ backdrop-filter: blur( 4px );
   background-color: #00090E;
   color:#B3CCFF ;
   height: 150px;
+  overflow: hidden;
+  position: relative;
 }
+
+.Skills .slider {
+width: 600px;
+}
+
+
 .Skills::-webkit-scrollbar {
   width: 2px; /* width of the scrollbar */
   margin-top: 2px;
@@ -199,5 +280,5 @@ backdrop-filter: blur( 4px );
 .Portfolio{
   background-color: #B3CCFF;
   color: #00090E;
-  height: 200px;
+  
 }

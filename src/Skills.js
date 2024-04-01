@@ -118,10 +118,16 @@ const Skills = () => {
     return ( 
         <div className="Skills flex overflow-x-auto overflow-y-hidden  justify-around w-full items-center text-center">
              {skills.map((skill, index) => (
-      <div className="flex flex-col items-center gap-1" key={index}>
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          whileHover={{ scale: 1.1}}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{once:true}}
+      className="flex flex-col items-center gap-1" key={index}>
         {skill.icon}
         <span className="text-center font-semibold">{skill.text}</span>
-      </div>
+      </motion.div>
     ))}
         </div>
      );
