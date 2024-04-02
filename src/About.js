@@ -3,7 +3,7 @@ import profil from './images/profile2.jpg'
 const About = () => {
     return ( 
         <div id="about" className="about flex w-full justify-center gap-20 ">
-           <div className=" w-fit mt-16">
+           <div className=" w-fit h-fit mt-20">
                 <div className="flex flex-col gap-4">
                     <div className="flex">
                     <svg
@@ -31,7 +31,7 @@ const About = () => {
                     </div>
                 </div>
            </div>
-           <div className="w-1/2 sm:w-1/4">
+           <div className="w-1/2 h-fit sm:w-1/4">
            <div className="flex flex-col">
                     <div className="aboutme mt-16 ">
                         <p style={{color:"#00090E" ,width:'max-content'}} className='font-extrabold'>ABOUT ME </p>
