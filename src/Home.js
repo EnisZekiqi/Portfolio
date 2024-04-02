@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { useState } from "react";
-
+import { AnimatePresence, motion } from "framer-motion";
 import laptop3 from './images/pakata-goh-RDolnHtjVCY-unsplash.jpg'
 import AddIcon from '@mui/icons-material/Add';
 
@@ -10,6 +10,7 @@ const Home = () => {
     const[hover2,setHover2]=useState(false)
 
 
+    
     return ( 
         <div className="home">
             <div className="flex container mx-auto px-2 lg:px-8 flex-col md:flex-row justify-center md:justify-between">
@@ -29,7 +30,19 @@ const Home = () => {
                     </div>
                     <div className="arrow"/>
                 </div>
-                <div className="photography flex items-center ">
+               <AnimatePresence>
+               <motion.div
+                animate={{
+                    y:[0,-30,0] ,
+                    transition: {
+                      duration: 2,
+                      ease: "linear",
+                      times:[0,1],
+                      repeat: Infinity,
+                      repeatType: "reverse"
+                    },
+                  }}
+                className="photography flex items-center ">
                 <svg width="400" height="500" viewBox="0 0 960 1280">
       <defs>
         <clipPath id="blobClip">
@@ -52,7 +65,8 @@ const Home = () => {
             <p style={{color:"#00090E"}} className="font-bold text-lg">RESPONSIVE DESIGN</p>
         </div>
     </div>
-                </div>
+                </motion.div>
+               </AnimatePresence>
             </div>
         </div>
      );
