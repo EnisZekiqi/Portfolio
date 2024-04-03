@@ -111,18 +111,148 @@ animation: updown 4s linear infinite;
   .card2{
     width: 450px;
   }
-  .card3{
-    width: 450px;
+}
+@media (max-width:475px) {
+  .card{
+    width: 410px;
+  }
+  .card2{
+    width: 410px;
   }
 }
 
 @media (max-width:520px) {
-  .card3{
-    width: 450px;
+ .card3{
+    width: 450px !important;
+  }
+  .card4{
+    width: 450px !important;
   }
 }
 
+@media (max-width:475px) {
+  .card3{
+     width: 410px !important;
+   }
+   .card4{
+     width: 410px !important;
+   }
+ }
+
+
+ .social1{
+  border-radius: 10px;
+  background-color: #B3CCFF;
+  color: #00090E;
+  height: 50px;
+  width: 120px;
+ }
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+.input-field2 {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #00090E;
+  outline: none;
+  background-color: transparent;
+}
+@media (max-width:767px) {
+  .input-field{
+     width: 500px !important;
+     margin-top: 20px;
+   }
+   
+ }
+ .collab{
+  border-radius: 10px;
+  border: 1px solid #B3CCFF;
+  width: max-content;
+ }
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #66ADCC;
+  transition: all 0.3s ease;
+}
+.input-highlight2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #00090E;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #66ADCC;
+}
+.input-field2:focus + .input-label2 {
+  top: -20px;
+  font-size: 12px;
+  color: #00090E;
+}
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+  color: #090909; /* Change text color to white */
+}
+::-ms-input-label { /* Edge 12-18 */
+  color: #00090E;
+}
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+.contact{
+  background-color: #00090E;
+  color: #B3CCFF;
+}
 .card3{
+  height: 254px;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px  rgba(0, 9, 14,0.4);
+  font-size: 30px;
+  font-weight: 900;
+}
+.card4{
   width: 500px;
   height: 254px;
   transition: all 0.4s;
@@ -161,7 +291,15 @@ animation: updown 4s linear infinite;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.card4:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 9, 14,0.55);
+  background-image: url(images/facebuki.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .first-content {
   height: 100%;
   background-image: url(images/autoz.PNG);
@@ -203,7 +341,20 @@ animation: updown 4s linear infinite;
   opacity: 1;
   border-radius: 10px;
 }
-
+.first-content4{
+  height: 100%;
+  background-image: url(images/facebuki.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 10px;
+}
 .card:hover .first-content{
   height: 0px;
   opacity: 0;
@@ -213,6 +364,10 @@ animation: updown 4s linear infinite;
   opacity: 0;
 }
 .card3:hover .first-content3{
+  height: 0px;
+  opacity: 0;
+}
+.card4:hover .first-content4{
   height: 0px;
   opacity: 0;
 }
@@ -247,6 +402,14 @@ backdrop-filter: blur( 4.5px );
   display: flex;
 }
 .card3:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+  cursor: default;
+  display: flex;
+}
+.card4:hover .second-content {
   opacity: 1;
   height: 100%;
   font-size: 1.8rem;

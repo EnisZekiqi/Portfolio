@@ -41,6 +41,7 @@ const Home = () => {
                       backgroundColor:darkMode ? "#66ADCC4d": "#2d6b86"
                     }}
                     className={`view ${hover === true ? 'view2' : ''}`} >HIRE ME</button>
+                    <a href="#portfolio">
                     <button
                      onMouseEnter={()=>setHover2(true)}
                      onMouseLeave={()=>setHover2(false)}
@@ -48,6 +49,8 @@ const Home = () => {
                       color:darkMode ? "#66ADCC4d": "#2d6b86"
                     }}
                      className={`view3 ${hover2 === true ? 'view4' : ''}`}>VIEW MY PORTFOLIO</button>
+                    </a>
+
                     </div>
                     <div className="arrow"/>
                 </div>

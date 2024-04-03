@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import Skills from './Skills';
 import Portfolio from './Portfolio';
+import Contact from './Contact';
 import { useDarkMode } from "./DarkModeContext";
 
 
@@ -26,6 +27,7 @@ function App() {
         <About/>
         <Skills/>
         <Portfolio/>
+        <Contact/>
       </header>
     
     </div>
