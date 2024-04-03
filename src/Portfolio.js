@@ -1,8 +1,14 @@
 import { useState } from "react";
 import { useAnimate,motion,AnimatePresence } from "framer-motion";
 import LaunchIcon from '@mui/icons-material/Launch';
+import { useDarkMode } from "./DarkModeContext";
 
 const Portfolio = () => {
+
+    
+    const { darkMode } = useDarkMode();
+    const { toggleDarkMode } = useDarkMode();
+
 
     const [scope, animate] = useAnimate(true) /// all button 
     const [all,setAll]=useState(true) /// all content 
@@ -43,7 +49,11 @@ const Portfolio = () => {
     }
 
     return ( 
-        <div id="portfolio" className="Portfolio">
+        <div
+        style={{
+            backgroundColor:darkMode ? "#B3CCFF":"#00090E"
+        }} 
+        id="portfolio" className="Portfolio">
             <div className="empty9"></div>
             <p style={{color:"#00090E"}} className='font-extrabold'>PORTFOLIO </p>
             <div className="flex items-center justify-center gap-8 mt-10">
@@ -51,7 +61,7 @@ const Portfolio = () => {
                 style={{
                     backgroundColor: all ? "#00090E" : "#6699CC",
                     color:all ? "#6699CC": "#00090E",
-                    scale:all ? "1.1" :"1"
+                    scale:all ? "1.1" :"1",
                 }}
                 onClick={handleone} className="pfbtn pl-2 pr-2" >All</button>
                 <button ref={scope1} onClick={handletwo} className="pfbtn  pl-2 pr-2">React</button>

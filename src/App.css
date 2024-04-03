@@ -294,6 +294,19 @@ transition: 0.5s ease-in-out;
 .view4{
   transform: scale(1.1);
 }
+.view5{
+  background-color:#2d6b86 ;
+  margin-top: 15px;
+  color:#B3CCFF ;
+  transform: scale(1.1);
+  border-radius: 10px;
+  width: max-content;
+  padding: 10px;
+  box-shadow:  0px 2px 14px 4px rgba(0,9,14,0.75);
+  -webkit-box-shadow: 0px 2px 14px 4px rgba(0,9,14,0.75);
+  -moz-box-shadow:  0px 2px 14px 4px rgba(0,9,14,0.75);
+transition: 0.5s ease-in-out;
+}
 .bold{
   color: #6699CC;
   font-weight: 800;
@@ -311,6 +324,11 @@ transition: 0.5s ease-in-out;
   width: 90px;
   height: 3px;
   margin-left: 0px;
+  background-color: #00090E;
+}
+.line3{
+  width: 60px;
+  height: 3px;
   background-color: #00090E;
 }
 .nonomi{

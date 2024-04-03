@@ -1,8 +1,17 @@
 import llaptop from './images/llaptopo.jpg'
 import profil from './images/profile2.jpg'
+import { useDarkMode } from "./DarkModeContext";
 const About = () => {
+
+
+    const { darkMode } = useDarkMode();
+    const { toggleDarkMode } = useDarkMode();
+
     return ( 
-        <div id="about" className="about flex w-full justify-center gap-20 ">
+        <div 
+        style={{ backgroundColor: darkMode ? "#B3CCFF" : "#00090E",  
+    }}
+        id="about" className="about flex w-full justify-center gap-20 ">
            <div className=" w-fit h-fit mt-20">
                 <div className="flex flex-col gap-4">
                     <div className="flex">
@@ -21,6 +30,9 @@ const About = () => {
                         <img style={{borderRadius:20}} className='profili -mt-14 -ml-20' src={profil} alt="" />
                         <svg
                     className='ml-16 mt-2 md:ml-16 md:mt-2 '
+                    style={{
+                        fill:darkMode ? "#00090E": "#BFECFF"
+                    }}
                     fill="#00090E"
                     viewBox="0 0 16 16"
                     height="30px"
@@ -34,7 +46,9 @@ const About = () => {
            <div className="w-1/2 h-fit sm:w-1/4">
            <div className="flex flex-col">
                     <div className="aboutme mt-16 ">
-                        <p style={{color:"#00090E" ,width:'max-content'}} className='font-extrabold'>ABOUT ME </p>
+                        <p style={{width:'max-content',
+                    color:darkMode ? "#00090E":"#B3CCFF"
+                    }} className='font-extrabold'>ABOUT ME </p>
                     </div>
                     <div className="tekxti mt-6 text-start">
                         <p style={{color:"#265c73"}}>I am a Front-End Developer from Kosovo that is excited to create new stunning websites. My experties lies crafting dynamic , engaging interfaces and stylish designs . I am also a team player who thrives in collaborating with the team</p>

@@ -1,13 +1,19 @@
 import { useState,useEffect } from "react";
 import { motion } from "framer-motion";
-
+import { useDarkMode } from "./DarkModeContext";
 const Skills = () => {
+
+  const { darkMode } = useDarkMode();
+  const { toggleDarkMode } = useDarkMode();
 
 
     const skills = [ 
         {
          icon: (
               <svg
+              style={{
+                fill:darkMode ? "#B3CCFF":"#00090E"
+              }}
                 viewBox="0 0 1024 1024"
                 fill="#B3CCFF"
                 height="50px"
@@ -23,13 +29,16 @@ const Skills = () => {
         icon:(
             <svg
             viewBox="0 0 32 32"
+            style={{
+              fill:darkMode ? "#B3CCFF":"#00090E"
+            }}
             fill="#B3CCFF"
             height="50px"
             width="50px"
             className="mx-10"
           >
             <path
-              fill="#B3CCFF"
+              
               d="M16.017 21.044zM4.743 3.519L6.792 26.5l9.194 2.552 9.22-2.556 2.051-22.977H4.743zM23 8.775l-.693 7.767-.48 5.359-.042.476-5.781 1.603-5.773-1.603-.395-4.426h2.829l.201 2.248 3.142.847.008-.002h.002l3.134-.846.329-3.655h-6.579l-.056-.633-.129-1.429-.067-.756h7.081l.258-2.886H9.203l-.056-.634-.129-1.429-.067-.756h14.118l-.068.756z"
             />
           </svg>
@@ -40,6 +49,9 @@ const Skills = () => {
         icon:(
             <svg
     viewBox="0 0 24 24"
+    style={{
+      fill:darkMode ? "#B3CCFF":"#00090E"
+    }}
     fill="#B3CCFF"
     height="45px"
     width="45px"
@@ -56,6 +68,9 @@ const Skills = () => {
     icon:(
         <svg
       viewBox="0 0 24 24"
+      style={{
+        fill:darkMode ? "#B3CCFF":"#00090E"
+      }}
       fill="#B3CCFF"
       height="50px"
       width="50px"
@@ -70,6 +85,9 @@ const Skills = () => {
         icon:(
             <svg
      viewBox="0 0 24 24"
+     style={{
+      fill:darkMode ? "#B3CCFF":"#00090E"
+    }}
      fill="#B3CCFF"
      height="50px"
      width="50px"
@@ -84,6 +102,9 @@ const Skills = () => {
     icon:(
         <svg
         viewBox="0 0 24 24"
+        style={{
+          fill:darkMode ? "#B3CCFF":"#00090E"
+        }}
         fill="#B3CCFF"
         height="50px"
         width="50px"
@@ -98,13 +119,16 @@ const Skills = () => {
     icon:(
         <svg
    viewBox="0 0 32 32"
+   style={{
+    fill:darkMode ? "#B3CCFF":"#00090E"
+  }}
    fill="#B3CCFF"
    height="50px"
    width="50px"
    className="mx-10"
  >
    <path
-     fill="#B3CCFF"
+     
      d="M4.681 16.27a11.3 11.3 0 006.371 10.171L5.661 11.668a11.256 11.256 0 00-.98 4.602zm18.935-.571c0-1.397-.503-2.365-.932-3.118-.573-.932-1.109-1.719-1.109-2.652 0-1.039.785-2.006 1.898-2.006.048 0 .097.007.145.01a11.26 11.26 0 00-7.632-2.968c-3.95 0-7.424 2.027-9.444 5.096.266.008.515.014.727.014 1.183 0 3.013-.145 3.013-.145.608-.034.68.859.071.932 0 0-.611.071-1.293.108l4.117 12.243 2.474-7.418-1.762-4.825a21.832 21.832 0 01-1.185-.108c-.61-.037-.537-.966.073-.932 0 0 1.865.145 2.976.145 1.182 0 3.014-.145 3.014-.145.607-.034.679.859.07.932 0 0-.611.071-1.292.108l4.085 12.15 1.128-3.766c.573-1.47.861-2.686.861-3.655zm-7.432 1.56l-3.393 9.856a11.317 11.317 0 006.948-.183 1.07 1.07 0 01-.081-.154l-3.474-9.519zm9.72-6.413c.05.361.078.747.078 1.164 0 1.146-.215 2.435-.861 4.049l-3.453 9.981a11.292 11.292 0 005.619-9.769c0-1.967-.502-3.814-1.384-5.425z"
    />
  </svg>
@@ -116,7 +140,11 @@ const Skills = () => {
 
 
     return ( 
-        <div className="Skills flex overflow-x-auto overflow-y-hidden  justify-around w-full items-center text-center">
+        <div
+        style={{
+          backgroundColor:darkMode ? "#00090E":"#B3CCFF"
+        }}
+        className="Skills flex overflow-x-auto overflow-y-hidden  justify-around w-full items-center text-center">
              {skills.map((skill, index) => (
       <motion.div
         initial={{ x: -100, opacity: 0 }}
@@ -126,7 +154,11 @@ const Skills = () => {
           viewport={{once:true}}
       className="flex flex-col items-center gap-1" key={index}>
         {skill.icon}
-        <span className="text-center font-semibold">{skill.text}</span>
+        <span
+        style={{
+          color:darkMode? "#B3CCFF":"#00090E"
+        }}
+        className="text-center font-semibold">{skill.text}</span>
       </motion.div>
     ))}
         </div>
