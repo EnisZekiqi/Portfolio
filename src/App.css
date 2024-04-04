@@ -35,7 +35,7 @@ html{
 }
 .about{
   background-color: #B3CCFF;
-  height: 100vh;
+  height: 600px;
   margin-bottom: -40px;
 }
 @media (max-width:764px) {
