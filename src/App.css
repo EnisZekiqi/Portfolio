@@ -139,7 +139,22 @@ animation: updown 4s linear infinite;
    }
  }
 
-
+ @media (max-width:430px) {
+  .card{
+    width: 350px;
+  }
+  .card2{
+    width: 350px;
+  }
+}
+@media (max-width:430px) {
+  .card3{
+    width: 350px !important;
+  }
+  .card4{
+    width: 350px !important;
+  }
+}
  .social1{
   border-radius: 10px;
   background-color: #B3CCFF;
@@ -177,6 +192,13 @@ animation: updown 4s linear infinite;
 @media (max-width:767px) {
   .input-field{
      width: 500px !important;
+     margin-top: 20px;
+   }
+   
+ }
+ @media (max-width:530px) {
+  .input-field{
+     width: 300px !important;
      margin-top: 20px;
    }
    
@@ -239,12 +261,28 @@ animation: updown 4s linear infinite;
 .input-field:focus + .input-label + .input-highlight {
   width: 100%;
 }
-
+.successmsg{
+  width: max-content;
+  padding: 5px;
+  background-color: #B3CCFF;
+  color: #00090E;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.errormsg{
+  width: max-content;
+  padding: 5px;
+  background-color: #B3CCFF;
+  color: #00090E;
+  border-radius: 10px;
+  font-weight: 700;
+}
 .contact{
   background-color: #00090E;
   color: #B3CCFF;
 }
 .card3{
+  width: 500px;
   height: 254px;
   transition: all 0.4s;
   border-radius: 10px;
@@ -497,6 +535,9 @@ transition: 0.5s ease-in-out;
 .nonomi{
   font-weight: 700;
 }
+.nonomi3{
+  display: block !important;
+}
 .nonomi2{
   color: #00090E;
   font-weight: 700;
@@ -513,6 +554,12 @@ transition: 0.5s ease-in-out;
 @media (max-width:764px) {
   .nonomi{
     display: none;
+    visibility: hidden;
+  }
+  .nonomi3{
+    position: absolute;
+    left: 78%;
+    
   }
   
 }

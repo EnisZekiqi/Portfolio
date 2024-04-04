@@ -35,8 +35,8 @@ const Navbar = () => {
         style={{ backgroundColor: darkMode ? "#00090E" : "#B3CCFF" }}
          className="navbar justify-between flex gap-2">
             <h1 className="Intro ml-4">Enis.dev</h1>
-            <div className="nonomi flex gap-4 mr-4">
-                  <div className="">
+            <div className="flex">
+            <div className="nonomi3">
                   <button style={{backgroundColor:"transparent"
               ,display:darkMode ? "block":"none"
               }} onClick={handleClick}><LightModeIcon sx={{color:"#B3CCFF"}}/></button>
@@ -45,6 +45,7 @@ const Navbar = () => {
                 ) :<button style={{backgroundColor:"transparent"}} onClick={handleClick}><DarkModeIcon sx={{color:"#00090E"}}/></button>
                 }
                   </div>
+            <div className="nonomi flex gap-4 mr-4">
                 <div className="flex flex-col">
                 <a  onMouseEnter={()=>setShow(true)}
               onMouseLeave={()=>setShow(false)} href="">Home</a>
@@ -87,7 +88,9 @@ const Navbar = () => {
                 className='line   origin-left h-1 rounded-full transition-transform duration-300 ease-out'></span>
                     </div> 
             </div>
+            </div>
             <div className="hamburger relative">
+              
                     <button onClick={toggleDrawer}><MenuIcon/> </button>
                     <AnimatePresence>
                     {drawer && (
@@ -147,10 +150,14 @@ const Navbar = () => {
             </div>
             </motion.div>
             </div>
+            
           </>
+          
         )}
+        
                     </AnimatePresence>
                     </div>
+                    
         </div>
      );
 }

@@ -34,13 +34,15 @@ const Home = () => {
                     style={{ color:darkMode ? "#B3CCFF" : "#00090E"}}
                     className="bold2 ">Web Developer</b></h4>
                    <div className="flex gap-4 font-semibold mt-4">
-                     <button
+                      <a href="#contact">
+                      <button
                     onMouseEnter={()=>setHover(true)}
                     onMouseLeave={()=>setHover(false)}
                     style={{
                       backgroundColor:darkMode ? "#66ADCC4d": "#2d6b86"
                     }}
                     className={`view ${hover === true ? 'view2' : ''}`} >HIRE ME</button>
+                      </a>
                     <a href="#portfolio">
                     <button
                      onMouseEnter={()=>setHover2(true)}

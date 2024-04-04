@@ -2,10 +2,48 @@ import { useDarkMode } from "./DarkModeContext";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import TextField from '@mui/material/TextField';
+import { useState } from "react";
 const Contact = () => {
     const { darkMode } = useDarkMode();
     const { toggleDarkMode } = useDarkMode();
+
+
+    const [name,setName]=useState('')
+    const [email,setEmail]=useState('')
+    const [comment,setComment]=useState('')
+    const [success,setSuccess]=useState(false)
+    const [error,setError]=useState(false)
+
+
+    const handleInput =(e)=>{
+        const { name, value } = e.target;
+    if (name === 'name') {
+        setName(value);
+    } else if (name === 'email') {
+        setEmail(value);
+    } else if (name === 'comment') {
+        setComment(value);
+    }
+    }
+
+    const handleSubmit =()=>{
+        if(name.trim() !== '' && email.trim() !== '' && comment.trim() !== ''){
+            setSuccess(true)
+            setError(false)
+            setName('')
+            setEmail('')
+            setComment('')
+        }else{
+            setSuccess(false)
+            setError(true)
+        }
+        setTimeout(()=>{
+            setSuccess(false)
+            setError(false)
+        },5000)
+    }
 
     return ( 
         <div
@@ -15,8 +53,8 @@ const Contact = () => {
         id="contact" className="contact">
              <div className="empty9"></div>
             <p style={{color:darkMode ? "#B3CCFF":"#00090E"}} className='font-extrabold'>CONTACT</p>
-            <div className="flex flex-col md:flex-row justify-center sm:justify-evenly mt-16">
-                <div className="flex flex-col gap-4 mt-12 justify-center items-center mb-10 sm:mb-0">
+            <div className="flex flex-col md:flex-row justify-center items-center sm:justify-evenly mt-16">
+                <div className="flex flex-col gap-4  justify-center items-center mb-10 sm:mb-0">
                     <a href="https://github.com/EnisZekiqi" target="_blank" rel="noopener noreferrer">
                     <motion.button
                      whileHover={{ scale: 1.1 }}
@@ -54,37 +92,31 @@ const Contact = () => {
                     </div></motion.button>
                         </a>
                 </div>
-                    <div className="flex flex-col items-center">
+                   
 
-                    <div class="input-container">
-                    <input placeholder="Name" 
-                  className={`input-field ${darkMode ? 'input-field' : 'input-field2' }`}
-                    type="text"/>
-                    <label for="input-field" class="input-label">Name</label>
-                    <span  className={`input-highlight ${darkMode ? 'input-highlight' : 'input-highlight2' }`}></span>
-                    </div>
-                    <div class="input-container">
-                    <input placeholder="Email" 
-                    className={`input-field ${darkMode ? 'input-field' : 'input-field2' }`}
-                    type="text"/>
-                    <label for="input-field" class="input-label">Email</label>
-                    <span  className={`input-highlight ${darkMode ? 'input-highlight' : 'input-highlight2' }`}></span>
-                    </div>
-                    <div class="input-container">
-                    <textarea placeholder="Comment"
-                     className={`input-field ${darkMode ? 'input-field' : 'input-field2' }`}
-                    type="comment"/>
-                    <label for="input-field"
-                     
-                     className={`input-label ${darkMode ? 'input-label' : 'input-label2' }`}>Comment</label>
-                    <span  className={`input-highlight ${darkMode ? 'input-highlight' : 'input-highlight2' }`}></span>
-                    </div>
-                    <motion.button 
+                    <form method='POST' action="https://getform.io/f/lbkmyllb" className='flex flex-col mt-12 md:mt-0  max-w-[450px] w-full'>
+            <input style={{ color: darkMode ? "#B3CCFF" : "#00090E",
+          backgroundColor: darkMode ? "#333" : "" }} className='p-2' type="text" placeholder='Name' name='name' />
+            <input 
+            style={{ color: darkMode ? "#B3CCFF" : "#00090E",
+            backgroundColor: darkMode ? "#333" : "" }}
+            className='my-4 p-2' type="email" placeholder='Email' name='email' />
+            <textarea style={{ color: darkMode ? "#B3CCFF" : "#00090E",
+          backgroundColor: darkMode ? "#333" : "" }} className=' p-2' name="message" rows="10" placeholder='Message'></textarea>
+            <div className="flex items-center justify-center">
+            <motion.button 
+                    type="submit"
+                    onClick={handleSubmit}
                      whileHover={{ scale: 1.1 }}
-                    className="collab pt-2 pr-2 pl-2 pb-2">Let's Collaborate</motion.button>
-                    </div>
+                     style={{
+                        backgroundColor:darkMode ? "":"#00090E",
+                        color:darkMode ? "":"#B3CCFF"
+                     }}
+                    className="collab pt-2 pr-2 pl-2 pb-2 mt-4">Let's Collaborate</motion.button>
             </div>
-            <div className="empty2"></div>
+        </form>
+                    
+            </div>
             <div className="empty2"></div>
         </div>
      );
