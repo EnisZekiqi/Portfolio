@@ -377,7 +377,7 @@ const Portfolio = () => {
                             <motion.a
                              initial={{scale:1}}
                              whileHover={{scale:1.1 ,transition:1 ,delay:0.5}}
-                            className="flex gap-2" href="https://t57cqw-5000.csb.app/" target="_blank" rel="noopener noreferrer">
+                            className="flex gap-2" href="https://eniszekiqi.github.io/Facebook-Project/" target="_blank" rel="noopener noreferrer">
                             <LaunchIcon sx={{color:"#00090E"}}/>
                             <p style={{color:"#00090E"}} className="font-bold text-sm text-center mt-1">Live Demo</p>
                               </motion.a>
