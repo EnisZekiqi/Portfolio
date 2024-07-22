@@ -3,6 +3,7 @@ import { useAnimate,motion,AnimatePresence } from "framer-motion";
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useDarkMode } from "./DarkModeContext";
 
+
 const Portfolio = () => {
 
     
@@ -78,6 +79,86 @@ const Portfolio = () => {
                     className="mt-16 w-full"
                     >
                     <div className="flex flex-col sm:flex-row gap-14 sm:gap-8 justify-center items-center">
+                    <div class="card5" 
+                     //// autoz project
+                    >
+                        <div class="first-content5">
+                           
+                        </div>
+                        <div class="second-content flex flex-col items-center justify-start">
+                        <span style={{color:"#00090E"}} className="font-extrabold">StarGym</span>
+                        <p style={{color:"#00324d"}} className="font-bold text-sm mt-4">
+                          StarGym is a website for users to create account , add friends , save advices , shop supplements ,diets and planprogram , for storing data i used js cookie
+                        </p>
+                        <div className="flex mt-4 gap-4">
+                            <div className="flex flex-col items-center">
+                                    <svg
+                                    viewBox="0 0 24 24"
+                                    fill="#00090E"
+                                    height="25px"
+                                    width="25px"
+                                    className=""
+                                >
+                                    <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 01-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68 0 1.69-1.83 2.93-4.37 3.68.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68 0-1.69 1.83-2.93 4.37-3.68-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26 0-.73-1.18-1.63-3.28-2.26-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26 0 .73 1.18 1.63 3.28 2.26.25-.76.55-1.51.89-2.26m9 2.26l-.3.51c.31-.05.61-.1.88-.16-.07-.28-.18-.57-.29-.86l-.29.51m-2.89 4.04c1.59 1.5 2.97 2.08 3.59 1.7.64-.35.83-1.82.32-3.96-.77.16-1.58.28-2.4.36-.48.67-.99 1.31-1.51 1.9M8.08 9.74l.3-.51c-.31.05-.61.1-.88.16.07.28.18.57.29.86l.29-.51m2.89-4.04C9.38 4.2 8 3.62 7.37 4c-.63.35-.82 1.82-.31 3.96a22.7 22.7 0 012.4-.36c.48-.67.99-1.31 1.51-1.9z" />
+                                </svg>
+                                <p style={{color:"#00090E"}} className="font-semibold text-sm text-center">React</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                 <svg
+                                viewBox="0 0 24 24"
+                                fill="#00090E"
+                                height="25px"
+                                width="25px"
+                                className=""
+                                >
+                                <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6m-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z" />
+                                </svg>
+                                <p style={{color:"#00090E"}} className="font-semibold text-sm text-center">Tailwind</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <svg
+                                viewBox="0 0 32 32"
+                                fill="#B3CCFF"
+                                height="25px"
+                                width="25px"
+                                className=""
+                            >
+                                <path
+                                fill="#00090E"
+                                d="M16.017 21.044zM4.743 3.519L6.792 26.5l9.194 2.552 9.22-2.556 2.051-22.977H4.743zM23 8.775l-.693 7.767-.48 5.359-.042.476-5.781 1.603-5.773-1.603-.395-4.426h2.829l.201 2.248 3.142.847.008-.002h.002l3.134-.846.329-3.655h-6.579l-.056-.633-.129-1.429-.067-.756h7.081l.258-2.886H9.203l-.056-.634-.129-1.429-.067-.756h14.118l-.068.756z"
+                                />
+                            </svg>
+                            <p style={{color:"#00090E"}} className="font-semibold text-sm text-center">CSS</p>
+                            </div>
+                        </div>
+                        <div className="flex mt-8 gap-4">
+                            <div className="flex">
+                            <motion.a
+                            initial={{scale:1}}
+                            whileHover={{scale:1.1 ,transition:1 ,delay:0.5}}
+                            className="flex gap-2" href="https://github.com/EnisZekiqi/StarGym" target="_blank" rel="noopener noreferrer">
+                            <svg
+                                viewBox="0 0 1024 1024"
+                                fill="#00090E"
+                                height="25px"
+                                width="25px"
+                                >
+                                <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
+                                </svg>
+                                <p style={{color:"#00090E"}} className="font-bold text-sm mt-1">Code</p></motion.a> 
+                            </div>
+                            <div className="flex">
+                            <motion.a
+                             initial={{scale:1}}
+                             whileHover={{scale:1.1 ,transition:1 ,delay:0.5}}
+                            className="flex gap-2" href="https://f7z68l-3000.csb.app/" target="_blank" rel="noopener noreferrer">
+                            <LaunchIcon sx={{color:"#00090E"}}/>
+                            <p style={{color:"#00090E"}} className="font-bold text-sm text-center mt-1">Live Demo</p>
+                              </motion.a>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
                     <div class="card" 
                      //// autoz project
                     >
@@ -400,6 +481,86 @@ const Portfolio = () => {
                     className="mt-16 w-full "
                     >
                     <div className="flex flex-col sm:flex-row justify-center items-center  gap-14 sm:gap-8">
+                    <div class="card5" 
+                     //// autoz project
+                    >
+                        <div class="first-content5">
+                           
+                        </div>
+                        <div class="second-content flex flex-col items-center justify-start">
+                        <span style={{color:"#00090E"}} className="font-extrabold">StarGym</span>
+                        <p style={{color:"#00324d"}} className="font-bold text-sm mt-4">
+                          StarGym is a website for users to create account , add friends , save advices , shop supplements ,diets and planprogram , for storing data i used js cookie
+                        </p>
+                        <div className="flex mt-4 gap-4">
+                            <div className="flex flex-col items-center">
+                                    <svg
+                                    viewBox="0 0 24 24"
+                                    fill="#00090E"
+                                    height="25px"
+                                    width="25px"
+                                    className=""
+                                >
+                                    <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 01-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68 0 1.69-1.83 2.93-4.37 3.68.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68 0-1.69 1.83-2.93 4.37-3.68-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26 0-.73-1.18-1.63-3.28-2.26-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26 0 .73 1.18 1.63 3.28 2.26.25-.76.55-1.51.89-2.26m9 2.26l-.3.51c.31-.05.61-.1.88-.16-.07-.28-.18-.57-.29-.86l-.29.51m-2.89 4.04c1.59 1.5 2.97 2.08 3.59 1.7.64-.35.83-1.82.32-3.96-.77.16-1.58.28-2.4.36-.48.67-.99 1.31-1.51 1.9M8.08 9.74l.3-.51c-.31.05-.61.1-.88.16.07.28.18.57.29.86l.29-.51m2.89-4.04C9.38 4.2 8 3.62 7.37 4c-.63.35-.82 1.82-.31 3.96a22.7 22.7 0 012.4-.36c.48-.67.99-1.31 1.51-1.9z" />
+                                </svg>
+                                <p style={{color:"#00090E"}} className="font-semibold text-sm text-center">React</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                 <svg
+                                viewBox="0 0 24 24"
+                                fill="#00090E"
+                                height="25px"
+                                width="25px"
+                                className=""
+                                >
+                                <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6m-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z" />
+                                </svg>
+                                <p style={{color:"#00090E"}} className="font-semibold text-sm text-center">Tailwind</p>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <svg
+                                viewBox="0 0 32 32"
+                                fill="#B3CCFF"
+                                height="25px"
+                                width="25px"
+                                className=""
+                            >
+                                <path
+                                fill="#00090E"
+                                d="M16.017 21.044zM4.743 3.519L6.792 26.5l9.194 2.552 9.22-2.556 2.051-22.977H4.743zM23 8.775l-.693 7.767-.48 5.359-.042.476-5.781 1.603-5.773-1.603-.395-4.426h2.829l.201 2.248 3.142.847.008-.002h.002l3.134-.846.329-3.655h-6.579l-.056-.633-.129-1.429-.067-.756h7.081l.258-2.886H9.203l-.056-.634-.129-1.429-.067-.756h14.118l-.068.756z"
+                                />
+                            </svg>
+                            <p style={{color:"#00090E"}} className="font-semibold text-sm text-center">CSS</p>
+                            </div>
+                        </div>
+                        <div className="flex mt-8 gap-4">
+                            <div className="flex">
+                            <motion.a
+                            initial={{scale:1}}
+                            whileHover={{scale:1.1 ,transition:1 ,delay:0.5}}
+                            className="flex gap-2" href="https://github.com/EnisZekiqi/StarGym" target="_blank" rel="noopener noreferrer">
+                            <svg
+                                viewBox="0 0 1024 1024"
+                                fill="#00090E"
+                                height="25px"
+                                width="25px"
+                                >
+                                <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
+                                </svg>
+                                <p style={{color:"#00090E"}} className="font-bold text-sm mt-1">Code</p></motion.a> 
+                            </div>
+                            <div className="flex">
+                            <motion.a
+                             initial={{scale:1}}
+                             whileHover={{scale:1.1 ,transition:1 ,delay:0.5}}
+                            className="flex gap-2" href="https://f7z68l-3000.csb.app/" target="_blank" rel="noopener noreferrer">
+                            <LaunchIcon sx={{color:"#00090E"}}/>
+                            <p style={{color:"#00090E"}} className="font-bold text-sm text-center mt-1">Live Demo</p>
+                              </motion.a>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
                     <div class="card">
                         <div class="first-content">
                            

@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import { useDarkMode } from "./DarkModeContext";
+import Marquee from 'react-fast-marquee';
 const Skills = () => {
 
   const { darkMode } = useDarkMode();
@@ -136,7 +137,35 @@ const Skills = () => {
     text:"Wordpress"
    }
     ]
+    const [reviews, setReviews] = useState([]);
+    const [isPaused, setIsPaused] = useState(false);
 
+    useEffect(() => {
+      setReviews(skills);
+    }, []);
+
+    const firstRow = skills.slice(0, skills.length / 2);
+    const secondRow = skills.slice(skills.length / 2);
+    
+    
+    const ReviewCard = ({ icon,text }) => {
+      return (
+        <figure
+          className="relative w-64 cursor-pointer overflow-hidden rounded-xl border mr-3 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] p-4  bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        >
+          <div className="flex flex-row items-center gap-2">
+          {icon}
+            <div className="flex flex-col">
+              <figcaption className="text-sm font-medium dark:text-white">
+                {text}
+              </figcaption>
+             
+            </div>
+          </div>
+         
+        </figure>
+      );
+    };
 
 
     return ( 
@@ -145,22 +174,23 @@ const Skills = () => {
           backgroundColor:darkMode ? "#00090E":"#B3CCFF"
         }}
         className="Skills flex overflow-x-auto overflow-y-hidden  justify-around w-full items-center text-center">
-             {skills.map((skill, index) => (
-      <motion.div
-        initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          whileHover={{ scale: 1.1}}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          viewport={{once:true}}
-      className="flex flex-col items-center gap-1" key={index}>
-        {skill.icon}
-        <span
-        style={{
-          color:darkMode? "#B3CCFF":"#00090E"
-        }}
-        className="text-center font-semibold">{skill.text}</span>
-      </motion.div>
-    ))}
+            <Marquee
+        speed={60}
+        pauseOnHover={true}
+        gradient={false}
+        className="flex items-center justify-center"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        {reviews.map((review, index) => (
+          <motion.div
+            className="review-card bg-gray-100 dark:bg-gray-800 p-5 mx-5 rounded-md shadow-md"
+            key={index}
+          >
+            <ReviewCard key={index} icon={review.icon} text={review.text} />
+          </motion.div>
+        ))}
+      </Marquee>
         </div>
      );
 }
